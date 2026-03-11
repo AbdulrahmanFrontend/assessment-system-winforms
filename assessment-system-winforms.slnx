@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="assessment-system-winforms.BLL/assessment-system-winforms.BLL.csproj" Id="b9369ccd-cad0-40b9-81c2-d2b7d182cb82" />
+  <Project Path="assessment-system-winforms.Core/assessment-system-winforms.Core.csproj" Id="5f7c9120-3d4f-4467-ba1c-3a20d5dbedeb" />
+  <Project Path="assessment-system-winforms.DAL/assessment-system-winforms.DAL.csproj" Id="330f441d-7f18-424d-b921-51304b9b2d4b" />
   <Project Path="assessment-system-winforms.UI/assessment-system-winforms.UI.csproj" Id="58bd079e-08c9-4b85-9547-63557207aab6" />
 </Solution>
