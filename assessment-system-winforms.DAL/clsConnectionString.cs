@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace assessment_system_winforms.DAL
 {
-    public class Class1
+    public class clsConnectionString
     {
+        public static string ConnectionString { get; set; }
     }
 }

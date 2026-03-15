@@ -41,8 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="clsConnectionString.cs" />
+    <Compile Include="Data\clsAnswerData.cs" />
+    <Compile Include="Data\clsExamData.cs" />
+    <Compile Include="Data\clsExaminationRecordData.cs" />
+    <Compile Include="Data\clsQuestionData.cs" />
+    <Compile Include="Data\clsUserAnswerData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Company.Framework\DAL\DAL.csproj">
+      <Project>{bd93863d-ebbf-42da-9526-4ada9ff78be3}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\assessment-system-winforms.Core\assessment-system-winforms.Core.csproj">
+      <Project>{5f7c9120-3d4f-4467-ba1c-3a20d5dbedeb}</Project>
+      <Name>assessment-system-winforms.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
