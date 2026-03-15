@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Core">
-      <HintPath>..\..\Company.Framework\Core\bin\Debug\Core.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
@@ -154,6 +151,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\problems.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\assessment-system-winforms.Core\assessment-system-winforms.Core.csproj">
+      <Project>{5f7c9120-3d4f-4467-ba1c-3a20d5dbedeb}</Project>
+      <Name>assessment-system-winforms.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
