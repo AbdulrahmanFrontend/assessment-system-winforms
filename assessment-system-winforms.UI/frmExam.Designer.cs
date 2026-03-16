@@ -66,7 +66,7 @@
             this.lblQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblQuestion.Location = new System.Drawing.Point(57, 9);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(125, 28);
+            this.lblQuestion.Size = new System.Drawing.Size(103, 23);
             this.lblQuestion.TabIndex = 0;
             this.lblQuestion.Text = "Question:";
             // 
@@ -77,7 +77,7 @@
             this.lblNumberOfQuestion.ForeColor = System.Drawing.Color.White;
             this.lblNumberOfQuestion.Location = new System.Drawing.Point(188, 8);
             this.lblNumberOfQuestion.Name = "lblNumberOfQuestion";
-            this.lblNumberOfQuestion.Size = new System.Drawing.Size(90, 29);
+            this.lblNumberOfQuestion.Size = new System.Drawing.Size(69, 23);
             this.lblNumberOfQuestion.TabIndex = 1;
             this.lblNumberOfQuestion.Text = "1 / 105";
             // 
@@ -104,7 +104,7 @@
             this.lblExamTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblExamTimer.Location = new System.Drawing.Point(57, 10);
             this.lblExamTimer.Name = "lblExamTimer";
-            this.lblExamTimer.Size = new System.Drawing.Size(158, 28);
+            this.lblExamTimer.Size = new System.Drawing.Size(130, 23);
             this.lblExamTimer.TabIndex = 12;
             this.lblExamTimer.Text = "Exam Timer:";
             // 
@@ -115,7 +115,7 @@
             this.lblQuantityExamTimer.ForeColor = System.Drawing.Color.White;
             this.lblQuantityExamTimer.Location = new System.Drawing.Point(221, 8);
             this.lblQuantityExamTimer.Name = "lblQuantityExamTimer";
-            this.lblQuantityExamTimer.Size = new System.Drawing.Size(94, 29);
+            this.lblQuantityExamTimer.Size = new System.Drawing.Size(74, 23);
             this.lblQuantityExamTimer.TabIndex = 13;
             this.lblQuantityExamTimer.Text = "1:34:38";
             // 
@@ -126,7 +126,7 @@
             this.lblQuantityOfQuestionTimer.ForeColor = System.Drawing.Color.White;
             this.lblQuantityOfQuestionTimer.Location = new System.Drawing.Point(262, 8);
             this.lblQuantityOfQuestionTimer.Name = "lblQuantityOfQuestionTimer";
-            this.lblQuantityOfQuestionTimer.Size = new System.Drawing.Size(60, 29);
+            this.lblQuantityOfQuestionTimer.Size = new System.Drawing.Size(47, 23);
             this.lblQuantityOfQuestionTimer.TabIndex = 15;
             this.lblQuantityOfQuestionTimer.Text = "1:01";
             // 
@@ -137,7 +137,7 @@
             this.lblQuestionTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblQuestionTimer.Location = new System.Drawing.Point(57, 9);
             this.lblQuestionTimer.Name = "lblQuestionTimer";
-            this.lblQuestionTimer.Size = new System.Drawing.Size(199, 28);
+            this.lblQuestionTimer.Size = new System.Drawing.Size(164, 23);
             this.lblQuestionTimer.TabIndex = 14;
             this.lblQuestionTimer.Text = "Question Timer:";
             // 
@@ -244,10 +244,10 @@
             this.chkReviewMark.AutoSize = true;
             this.chkReviewMark.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkReviewMark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.chkReviewMark.Location = new System.Drawing.Point(12, 666);
+            this.chkReviewMark.Location = new System.Drawing.Point(12, 671);
             this.chkReviewMark.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkReviewMark.Name = "chkReviewMark";
-            this.chkReviewMark.Size = new System.Drawing.Size(164, 25);
+            this.chkReviewMark.Size = new System.Drawing.Size(128, 20);
             this.chkReviewMark.TabIndex = 22;
             this.chkReviewMark.Text = "Mark For Review?";
             this.chkReviewMark.UseVisualStyleBackColor = true;
@@ -275,10 +275,10 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton4.Location = new System.Drawing.Point(10, 178);
+            this.radioButton4.Location = new System.Drawing.Point(10, 158);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.radioButton4.Size = new System.Drawing.Size(1276, 38);
+            this.radioButton4.Size = new System.Drawing.Size(1276, 33);
             this.radioButton4.TabIndex = 3;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Hashtable";
@@ -288,10 +288,10 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton1.Location = new System.Drawing.Point(10, 140);
+            this.radioButton1.Location = new System.Drawing.Point(10, 125);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.radioButton1.Size = new System.Drawing.Size(1276, 38);
+            this.radioButton1.Size = new System.Drawing.Size(1276, 33);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "List";
@@ -301,10 +301,10 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton3.Location = new System.Drawing.Point(10, 102);
+            this.radioButton3.Location = new System.Drawing.Point(10, 92);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.radioButton3.Size = new System.Drawing.Size(1276, 38);
+            this.radioButton3.Size = new System.Drawing.Size(1276, 33);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "ArrayList";
@@ -314,10 +314,10 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioButton2.Location = new System.Drawing.Point(10, 64);
+            this.radioButton2.Location = new System.Drawing.Point(10, 59);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.radioButton2.Size = new System.Drawing.Size(1276, 38);
+            this.radioButton2.Size = new System.Drawing.Size(1276, 33);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Stack";
@@ -330,13 +330,13 @@
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
-            this.label1.Size = new System.Drawing.Size(605, 54);
+            this.label1.Size = new System.Drawing.Size(480, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Which collection allows you to specify the type of objects it stores?";
             // 
             // frmExam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1323, 702);

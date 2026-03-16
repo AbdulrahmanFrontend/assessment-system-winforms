@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{330F441D-7F18-424D-B921-51304B9B2D4B}</ProjectGuid>
+    <ProjectGuid>{97683D6E-628F-4AD0-AD34-D643A19B4EB6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>assessment_system_winforms.DAL</RootNamespace>
-    <AssemblyName>assessment-system-winforms.DAL</AssemblyName>
+    <RootNamespace>DataAccessSettings</RootNamespace>
+    <AssemblyName>DataAccessSettings</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,23 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsConnectionString.cs" />
-    <Compile Include="Data\clsAnswerData.cs" />
-    <Compile Include="Data\clsExamData.cs" />
-    <Compile Include="Data\clsExaminationRecordData.cs" />
-    <Compile Include="Data\clsQuestionData.cs" />
-    <Compile Include="Data\clsUserAnswerData.cs" />
+    <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\assessment-system-winforms.Core\assessment-system-winforms.Core.csproj">
-      <Project>{5f7c9120-3d4f-4467-ba1c-3a20d5dbedeb}</Project>
-      <Name>assessment-system-winforms.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{bd93863d-ebbf-42da-9526-4ada9ff78be3}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

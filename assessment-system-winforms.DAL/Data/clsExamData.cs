@@ -1,8 +1,10 @@
-﻿using System;
+﻿using assessment_system_winforms.Core.Entities;
+using DAL;
+using System;
+using System.Configuration;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using DAL;
-using assessment_system_winforms.Core.Entities;
 
 namespace assessment_system_winforms.DAL
 {
@@ -121,6 +123,80 @@ namespace assessment_system_winforms.DAL
         {
             string query = "SELECT * FROM Exams";
             return DbHelper.GetDataTable(query);
+        }
+        public static List<clsQuestionEntity> PrepareExam(int ExamID)
+        {
+            // connection string from App.config
+            string connStr = ConfigurationManager
+                 .ConnectionStrings["ExamsDB"]
+                 .ConnectionString;
+
+            // Get all questions for the given ExamID
+            List<clsQuestionEntity> Exam = new List<clsQuestionEntity>();
+            string QuestionsQuery = "SELECT * FROM Questions where ExamID = @ExamID";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connStr))
+                {
+                    using (SqlCommand command = new SqlCommand(QuestionsQuery, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@ExamID", ExamID);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Exam.Add(new clsQuestionEntity
+                                {
+                                    QuestionID = Convert.ToInt32(reader["QuestionID"]),
+                                    Question = reader["Question"].ToString(),
+                                    ExamID = Convert.ToInt32(reader["ExamID"]),
+                                    RightAnswerID = reader["RightAnswerID"] != DBNull.Value ? (int?)Convert.ToInt32(reader["RightAnswerID"]) : null,
+                                    Explanation = reader["Explanation"].ToString()
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            // Get all answers for each getten question
+            string AnswersQuery = "SELECT * FROM Answers where QuestionID = @QuestionID";
+            try
+            {
+                foreach (var question in Exam)
+                {
+                    using (SqlConnection connection = new SqlConnection(connStr))
+                    {
+                        using (SqlCommand command = new SqlCommand(AnswersQuery, connection))
+                        {
+                            connection.Open();
+                            command.Parameters.AddWithValue("@QuestionID", question.QuestionID);
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    question.Answers.Add(new clsAnswerEntity
+                                    {
+                                        AnswerID = Convert.ToInt32(reader["AnswerID"]),
+                                        Answer = reader["Answer"].ToString(),
+                                        QuestionID = Convert.ToInt32(reader["QuestionID"])
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            return Exam;
         }
     }
 }

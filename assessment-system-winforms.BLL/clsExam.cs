@@ -2,7 +2,7 @@
 using assessment_system_winforms.DAL;
 using BLL;
 using Core;
-using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace assessment_system_winforms.BLL
@@ -68,6 +68,10 @@ namespace assessment_system_winforms.BLL
         public static DataTable GetExams()
         {
             return clsExamData.GetAllExams();
+        }
+        public static List<clsQuestionEntity> PrepareExamList(int ExamID)
+        {
+            return clsExamData.PrepareExam(ExamID);
         }
     }
 }

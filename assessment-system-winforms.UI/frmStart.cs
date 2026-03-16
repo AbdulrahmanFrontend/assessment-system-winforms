@@ -1,4 +1,7 @@
-﻿using System;
+﻿using assessment_system_winforms.BLL;
+using assessment_system_winforms.Core.Entities;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace CSCP

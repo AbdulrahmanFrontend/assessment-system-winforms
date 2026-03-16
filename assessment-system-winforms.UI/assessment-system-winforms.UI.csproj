@@ -153,9 +153,17 @@
     <None Include="Resources\problems.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\assessment-system-winforms.BLL\assessment-system-winforms.BLL.csproj">
+      <Project>{b9369ccd-cad0-40b9-81c2-d2b7d182cb82}</Project>
+      <Name>assessment-system-winforms.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\assessment-system-winforms.Core\assessment-system-winforms.Core.csproj">
       <Project>{5f7c9120-3d4f-4467-ba1c-3a20d5dbedeb}</Project>
       <Name>assessment-system-winforms.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{c5ee53f7-4338-41d3-9a1d-21175e4a1c60}</Project>
+      <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

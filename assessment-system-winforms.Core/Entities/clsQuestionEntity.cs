@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace assessment_system_winforms.Core.Entities
 {
@@ -13,5 +9,6 @@ namespace assessment_system_winforms.Core.Entities
         public int ExamID { get; set; }
         public int? RightAnswerID { get; set; }
         public string Explanation { get; set; }
+        public List<clsAnswerEntity> Answers { get; set; } = new List<clsAnswerEntity>();
     }
 }

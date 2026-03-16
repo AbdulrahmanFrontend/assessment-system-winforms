@@ -4,11 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{330F441D-7F18-424D-B921-51304B9B2D4B}</ProjectGuid>
+    <ProjectGuid>{799D95F6-DFE0-4E76-8BB2-3C7D7656D8AC}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>assessment_system_winforms.DAL</RootNamespace>
-    <AssemblyName>assessment-system-winforms.DAL</AssemblyName>
+    <RootNamespace>BaseUI</RootNamespace>
+    <AssemblyName>BaseUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\BaseUI.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,34 +31,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BLL">
+      <HintPath>..\BLL\bin\Debug\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Core">
+      <HintPath>..\Core\bin\Debug\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LL">
+      <HintPath>..\LL\bin\Debug\LL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsConnectionString.cs" />
-    <Compile Include="Data\clsAnswerData.cs" />
-    <Compile Include="Data\clsExamData.cs" />
-    <Compile Include="Data\clsExaminationRecordData.cs" />
-    <Compile Include="Data\clsQuestionData.cs" />
-    <Compile Include="Data\clsUserAnswerData.cs" />
+    <Compile Include="frmBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseForm.Designer.cs">
+      <DependentUpon>frmBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\assessment-system-winforms.Core\assessment-system-winforms.Core.csproj">
-      <Project>{5f7c9120-3d4f-4467-ba1c-3a20d5dbedeb}</Project>
-      <Name>assessment-system-winforms.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{bd93863d-ebbf-42da-9526-4ada9ff78be3}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
